@@ -15,6 +15,7 @@ To get the Node server running locally:
 ## Dependencies
 
 - [expressjs](https://github.com/expressjs/express) - The server for handling and routing HTTP requests
+- [body-parser](https://github.com/expressjs/body-parser) - Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
 - [serialport](https://github.com/node-serialport/node-serialport) - API for interacting with serial devices
 
 ## Application Structure
@@ -27,4 +28,5 @@ To get the Node server running locally:
 ## References
 
 David R. Flatla, Alan R. Andrade, Ross D. Teviotdale, Dylan L. Knowles, and Craig Stewart. 2015. ColourID: Improving Colour Identification for People with Impaired Colour Vision. In Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems (CHI '15). ACM, New York, NY, USA, 3543-3552. DOI: https://doi.org/10.1145/2702123.2702578
+
 [1]: https://doi.org/10.1145/2702123.2702578

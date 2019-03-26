@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Express HTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div style="margin:100px;">
+      <div
+        class="jumbotron"
+        style="padding:40px;display: flex; justify-content: center;flex-direction: column;"
+      >
+        <h1>HaptiJordon</h1>
+        <p>
+          This is a sample monitoring application designed for demonstrating
+          HaptiJordon's colour language.
+        </p>
+        <br />
+        Simply select a colour using the colour-picking tool below and submit it
+        with the button. The associated colour pattern will be played on the
+        accompanying wearable prototype. <br />
+        <form
+          method="post"
+          action="/rgb"
+          style="display:flex;justify-content: center;flex-direction: column;align-items: center"
+        >
+          <br />
+          <input type="color" name="rgb" id="rgb" /> <br />
+          <button class="btn btn-primary btn-lg">Play pattern</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
