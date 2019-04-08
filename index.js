@@ -28,10 +28,8 @@ router.post("/rgb", function(req, res) {
   // Look up colourname in the dictionary
   var hex = req.body["rgb"].substring(1); // retrieve the value and strip the 0x prefix
   var colourName = dict.getRGB565FromHex(hex);
-
   // Retrieve the pattern index from our json file
   var patternIndex = Pattern[colourName];
-
   // Output pattern index to serial out
   SerialConn.write(patternIndex.toString());
 });
