@@ -1,0 +1,187 @@
+<html>
+  <head>
+    <title>HaptiJordon - Learn</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+      h5 {
+        text-align: center;
+      }
+
+      .thumbnail {
+        margin-bottom: 5px;
+        margin-top: 10px;
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Apply an onclick handler to all a tags
+        // this handler will capture the background colour of the anchor
+        // and parse it to hex format, then apply it to a hidden colour input
+        // to be submitted to the back end
+        $("a").click(function(e) {
+          e = e || window.event;
+          var target = e.target || e.srcElement;
+          console.log(target);
+          var rgb = target.style.backgroundColor;
+          parsedRgb = parseRgbMethod(rgb);
+          console.log(parsedRgb);
+          $("#rgb").val(rgbToHex(parsedRgb));
+          $("#colourForm").submit();
+        });
+      });
+
+      // Parse the CSS rgb method that is returned by target.style.backgroundColor
+      // in order to obtain an array of [r, g, b]
+      // this is then converted into hex format by rgbToHex
+      function parseRgbMethod(rgb) {
+        return rgb.replace(/[^\d,]/g, "").split(",");
+      }
+
+      // https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+      function componentToHex(c) {
+        var hex = Number(c).toString(16);
+        return hex.length == 1 ? "0" + hex : hex;
+      }
+
+      function rgbToHex(rgb) {
+        return (
+          "#" +
+          componentToHex(rgb[0]) +
+          componentToHex(rgb[1]) +
+          componentToHex(rgb[2])
+        );
+      }
+      //
+    </script>
+  </head>
+  <body>
+    <div style="margin:100px;">
+      <div
+        class="jumbotron"
+        style="padding:40px;display: flex; justify-content: center;flex-direction: column;"
+      >
+        <h1>HaptiJordon - Learn</h1>
+        <p>
+          Select one of the squares below to have the corresponding colour
+          pattern played on the accompanying wrist worn wearable.
+        </p>
+
+        <form
+          method="post"
+          action="/rgb"
+          style="display:flex;justify-content: center;flex-direction: column;align-items: center"
+          id="colourForm"
+        >
+          <br />
+          <!-- Row One -->
+          <div class="row">
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #E10600;"> </a>
+              <h5>Red</h5>
+            </div>
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #FF6900;"> </a>
+              <h5>Orange</h5>
+            </div>
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #FCE300;"> </a>
+              <h5>Yellow</h5>
+            </div>
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #00A82D;"> </a>
+              <h5>Green</h5>
+            </div>
+          </div>
+          <!-- Row Two -->
+          <div class="row">
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #AACD00;"> </a>
+              <h5>Yellowgreen</h5>
+            </div>
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #F5F5CC;"> </a>
+              <h5>Beige</h5>
+            </div>
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #0096FF;"> </a>
+              <h5>Blue</h5>
+            </div>
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #942192;"> </a>
+              <h5>Purple</h5>
+            </div>
+          </div>
+          <!-- Row Three -->
+          <div class="row">
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #A9A9A9;"> </a>
+              <h5>Grey</h5>
+            </div>
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #AA7942;"> </a>
+              <h5>Brown</h5>
+            </div>
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #009193;"> </a>
+              <h5>Teal</h5>
+            </div>
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #941751;"> </a>
+              <h5>Magenta</h5>
+            </div>
+          </div>
+          <!-- Row Four -->
+          <div class="row">
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #F395C7;"> </a>
+              <h5>Pink</h5>
+            </div>
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #EFD19F;"> </a>
+              <h5>Tan</h5>
+            </div>
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #FFFFFF;"> </a>
+              <h5>White</h5>
+            </div>
+            <!-- Red -->
+            <div class="col-xs-6 col-md-3">
+              <a class="thumbnail" style="background-color: #000000;"> </a>
+              <h5>Black</h5>
+            </div>
+          </div>
+          <input type="color" name="rgb" id="rgb" style="display:none;" />
+          <br />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

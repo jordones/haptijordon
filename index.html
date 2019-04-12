@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Express HTML</title>
+    <title>HaptiJordon</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link
       rel="stylesheet"
@@ -36,6 +36,49 @@
           <input type="color" name="rgb" id="rgb" /> <br />
           <button class="btn btn-primary btn-lg">Play pattern</button>
         </form>
+      </div>
+      <div
+        class="jumbotron"
+        style="padding:40px;display: flex; justify-content: center;flex-direction: column;"
+      >
+        <h1>Training</h1>
+        <p>
+          Select one of the below options to enter a training exercise for
+          HaptiJordon.
+        </p>
+        <div
+          class="row"
+          style="padding:40px;display: flex; justify-content: center;flex-direction: row;"
+        >
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <div class="caption">
+                <h3>Learn</h3>
+                <p>
+                  Learn the HaptiJordon colour language by selecting from a grid
+                  of colours.
+                </p>
+                <p>
+                  <a href="/learn" class="btn btn-primary" role="button">Go!</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <div class="caption">
+                <h3>Test</h3>
+                <p>
+                  Test your familiarity with HaptiJordon by answering colour
+                  questions.
+                </p>
+                <p>
+                  <a href="/test" class="btn btn-primary" role="button">Go!</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

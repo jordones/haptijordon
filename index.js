@@ -24,12 +24,27 @@ router.get("/", function(req, res) {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
 
+router.get("/learn", function(req, res) {
+  //__dirname : It will resolve to your project folder.
+  res.sendFile(path.join(__dirname + "/view/learn.html"));
+});
+
+router.get("/test", function(req, res) {
+  //__dirname : It will resolve to your project folder.
+  res.sendFile(path.join(__dirname + "/view/test.html"));
+});
+
 router.post("/rgb", function(req, res) {
+  console.log(req.body);
+  if (req.body["rgb"].substring(3) === "rgb") {
+    console.log("this is a buttonclick");
+  }
   // Look up colourname in the dictionary
   var hex = req.body["rgb"].substring(1); // retrieve the value and strip the 0x prefix
   var colourName = dict.getRGB565FromHex(hex);
   // Retrieve the pattern index from our json file
   var patternIndex = Pattern[colourName];
+  console.log(colourName);
   // Output pattern index to serial out
   SerialConn.write(patternIndex.toString());
 });
