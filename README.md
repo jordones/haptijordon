@@ -1,6 +1,7 @@
 # HaptiJordon
 
 HaptiJordon is a wrist-worn wearable technology prototype with the goal of conveying colour information via haptic feedback.
+This repository contains the user-interface and monitoring software responsible for supplying input to the hardware device, available at [HaptiJordon - Arduino](https://github.com/jordones/haptijordon-arduino)
 
 # Getting started
 
