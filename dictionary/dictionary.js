@@ -44,6 +44,7 @@ module.exports = async function() {
         ((g_dec & 0b11111100) << 3) |
         (b_dec >> 3);
 
+      console.log(rgb);
       return _dict[rgb];
     }
   };
