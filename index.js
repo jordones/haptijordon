@@ -36,9 +36,6 @@ router.get("/test", function(req, res) {
 
 router.post("/rgb", function(req, res) {
   console.log(req.body);
-  if (req.body["rgb"].substring(3) === "rgb") {
-    console.log("this is a buttonclick");
-  }
   // Look up colourname in the dictionary
   var hex = req.body["rgb"].substring(1); // retrieve the value and strip the 0x prefix
   var colourName = dict.getRGB565FromHex(hex);
