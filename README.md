@@ -8,7 +8,7 @@ To get the Node server running locally:
 
 - Clone this repo
 - `npm install` to install all required dependencies
-- `npm run dev` to start the local server
+- `node index.js` to start the local server
 
 # Code Overview
 
@@ -23,7 +23,7 @@ To get the Node server running locally:
 - `index.js` - The entry point to our application. This file defines our express server. It also requires the routes and models we'll be using in the application.
 - `arduino/` - This folder contains configuration for interacting with the arduino hardware.
 - `dictionary/` - This folder contains our colour name dictionary from [Flatla et al.][1].
-- `routes/` - This folder contains the route definitions for our API.
+- `view/` - This folder contains the user-interface portion of the application.
 
 ## References
 
